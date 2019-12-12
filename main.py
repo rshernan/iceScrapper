@@ -5,12 +5,13 @@ import pandas as pandas
 
 app = Flask(__name__)
 
+path="path to chromedriver"
 
 options = webdriver.ChromeOptions()
 options.add_argument("headless")
 options.add_argument("disable-gpu")
 options.add_argument("no-sandbox") 
-driver = webdriver.Chrome("C:\\chromedriver.exe",chrome_options=options)
+driver = webdriver.Chrome(path,chrome_options=options)
 
 def transformUrl(url):
     content=""
